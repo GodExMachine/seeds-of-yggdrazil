@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d1c">
+  <meta name="description" content="Escolha seu mundo e aventure-se em Seeds of Yggdrasil.">
+  <title>Seeds of Yggdrasil — Seleção de Servidor</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --purple: #a78bfa;
+      --purple-bright: #c4b5fd;
+      --panel: rgba(15, 12, 27, .88);
+      --line: rgba(167, 139, 250, .42);
+      --text: #f4efff;
+      --muted: #b8adc9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 36px 18px;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        linear-gradient(rgba(8, 7, 15, .52), rgba(8, 7, 15, .82)),
+        url("menu_fundo.png") center / cover fixed,
+        #100d1c;
+    }
+
+    .screen {
+      width: min(100%, 760px);
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      width: min( min(100%, 520px), 80vw);
+      max-height: 230px;
+      object-fit: contain;
+      margin: 0 auto 18px;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, .75));
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.35rem, 4vw, 2rem);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 12px #000;
+    }
+
+    .subtitle {
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .servers {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .server {
+      display: flex;
+      min-height: 210px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 26px 20px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, .38), inset 0 0 24px rgba(120, 80, 190, .08);
+      backdrop-filter: blur(8px);
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+
+    .server:hover {
+      transform: translateY(-4px);
+      border-color: var(--purple-bright);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, .48), 0 0 22px rgba(167, 139, 250, .13);
+    }
+
+    .world {
+      margin-bottom: 8px;
+      color: var(--purple-bright);
+      font-size: .76rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .server h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.25rem, 3vw, 1.7rem);
+      font-weight: 600;
+    }
+
+    .address {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font: .78rem Arial, sans-serif;
+      overflow-wrap: anywhere;
+    }
+
+    .enter {
+      display: inline-block;
+      min-width: 155px;
+      padding: 12px 20px;
+      border: 1px solid #c4b5fd;
+      border-radius: 5px;
+      color: #171022;
+      background: linear-gradient(180deg, #d7c8ff, #9f82e8);
+      font: bold .82rem Arial, sans-serif;
+      letter-spacing: .1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 4px 16px rgba(139, 92, 246, .25);
+      transition: filter .2s, transform .2s;
+    }
+
+    .enter:hover { filter: brightness(1.12); transform: translateY(-1px); }
+
+    footer {
+      margin-top: 26px;
+      color: rgba(220, 210, 239, .65);
+      font: .72rem Arial, sans-serif;
+      letter-spacing: .08em;
+    }
+
+    @media (max-width: 560px) {
+      body { background-attachment: scroll; }
+      .servers { grid-template-columns: 1fr; }
+      .server { min-height: 185px; }
+      .logo { margin-bottom: 12px; }
+      .subtitle { margin-bottom: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="screen">
+    <img class="logo" src="logo.png" alt="Seeds of Yggdrasil">
+    <h1>Selecione seu servidor</h1>
+    <p class="subtitle">Escolha seu mundo para começar a aventura</p>
+
+    <section class="servers" aria-label="Servidores disponíveis">
+      <article class="server">
+        <span class="world">Servidor 1</span>
+        <h2>World 1</h2>
+        <p class="address">world1.seedsofyggdrazil.com</p>
+        <a class="enter" href="https://world1.seedsofyggdrazil.com/">Entrar no mundo</a>
+      </article>
+
+      <article class="server">
+        <span class="world">Servidor 2</span>
+        <h2>World 2</h2>
+        <p class="address">world2.seedsofyggdrazil.com</p>
+        <a class="enter" href="https://world2.seedsofyggdrazil.com/">Entrar no mundo</a>
+      </article>
+    </section>
+
+    <footer>SEEDS OF YGGDRASIL</footer>
+  </main>
+</body>
+</html>
